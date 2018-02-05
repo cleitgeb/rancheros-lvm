@@ -19,6 +19,6 @@ Add a service to your `cloud-config.yml` like the following example:
           volumes:
             - /media:/media:shared
           environment:
-            LVM_FOOBAR: myvg mylv foobar
+            LVM_FOOBAR: myvg;mylv;/media/foobar
 
 This configuration will mount the LV `/dev/myvg/mylv` to the `/media/foobar` folder.
