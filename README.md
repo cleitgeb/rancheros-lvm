@@ -10,7 +10,7 @@ Add a service to your `cloud-config.yml` like the following example:
     rancher:
       services:
         lvm:
-          image: melvyndekort/lmserver-lvm:1.0
+          image: melvyndekort/lmserver-lvm:1.2
           labels:
             io.rancher.os.after: console, preload-user-images
             io.rancher.os.scope: system
