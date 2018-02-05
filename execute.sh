@@ -14,7 +14,7 @@ for i in $(env | grep ^LVM_ | cut -d'=' -f2-); do
   MOUNT="$(echo $i | cut -d' ' -f3)"
 
   mkdir -p /media/${MOUNT}
-  echo "mount /dev/${VG}/${LV} /media/${MOUNT}"
-  mount /dev/${VG}/${LV} /media/${MOUNT}
+  echo "mount /dev/${VG}/${LV} ${MOUNT}"
+  mount /dev/${VG}/${LV} ${MOUNT}
 done
 IFS=$SAVEIFS
