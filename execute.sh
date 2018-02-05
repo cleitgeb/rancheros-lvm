@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 
 vgscan --mknodes
 
@@ -11,7 +11,7 @@ for i in $(env | grep ^LVM_ | cut -d'=' -f2-); do
   LV="$(echo $i | cut -d';' -f2)"
   MOUNT="$(echo $i | cut -d';' -f3)"
 
-  mkdir -p /media/${MOUNT}
+  mkdir -p ${MOUNT}
   echo "mount /dev/${VG}/${LV} ${MOUNT}"
   mount /dev/${VG}/${LV} ${MOUNT}
 done
