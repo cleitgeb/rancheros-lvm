@@ -1,0 +1,11 @@
+lvm:
+  image: melvyndekort/lmserver-lvm:1.2
+  labels:
+    io.rancher.os.after: console, preload-user-images
+    io.rancher.os.scope: system
+  privileged: true
+  restart: always
+  volumes:
+  - /home/rancher:/home/rancher:shared
+  environment:
+    LVM_FOOBAR: wdred_3tb;datastore1;/home/rancher/wdred_3tb
