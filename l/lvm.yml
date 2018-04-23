@@ -6,6 +6,6 @@ lvm:
   privileged: true
   restart: always
   volumes:
-  - /home/rancher:/home/rancher:shared
+  - /media:/media:shared
   environment:
-    LVM_FOOBAR: wdred_3tb;datastore1;/home/rancher/wdred_3tb
+    LVM_FOOBAR: wdred_3tb;datastore1;/media/wdred_3tb
