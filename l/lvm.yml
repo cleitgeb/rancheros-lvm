@@ -8,4 +8,5 @@ lvm:
   volumes:
   - /media:/media:shared
   environment:
-    LVM_FOOBAR: wdred_3tb;datastore1;/media/wdred_3tb
+    LVM_WDRED_3TB: wdred_3tb;datastore1;/media/wdred_3tb
+    LVM_DATEN_2TB: daten_2tb;datastore1;/media/daten_2tb
